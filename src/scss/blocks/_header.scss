@@ -1,0 +1,101 @@
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 8px 30px 10px rgb(34 60 80 / 20%);
+    background-color: inherit;
+    &__top {
+        display: flex;
+        padding: 10px 0;
+        justify-content: space-between;
+    }
+    &__menu {
+        display: flex;
+        align-items: center;
+    }
+    &__item {
+        position: relative;
+        margin-right: 14px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &__link {
+        display: inline-block;
+        color: #111111;
+        text-transform: uppercase;
+        font-size: 16px;
+        &::after { 
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            display: block;
+            background: none repeat scroll 0 0 transparent;
+            height: 4px;
+            width: 0;
+            background: #ff8562;
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        }  
+        &:hover::after { 
+            width: 100%; 
+            left: 0; 
+        }
+        &:hover {
+            color:#ff8562;
+        }
+    }
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__callback {
+        display: flex;
+        flex-direction: column;
+    }
+    &__phone {
+        font-size: 20px;
+        text-align: center;
+        color: #111;
+        &:hover {
+            color:#696969;
+        }
+    }
+    &__time {
+        color:#696969;
+        font-size: 14px;
+        text-align: center;
+    }
+    &__search {
+        display: flex;
+        align-items: center;
+    }
+}
+.logo {
+    position: relative;
+    width: 250px;
+    &__img {
+        width: 100%;
+    }
+}
+
+.heart {
+    position: absolute;
+    left: 108px;
+    bottom: -14px;
+    width: 50px;
+    height: 50px;
+    &_animated {
+        animation-name: heartbeat;
+        animation-duration: 1.5s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+    }
+}
+
+ion-icon {
+    font-size: 34px;
+    color: #111111;
+    cursor: pointer;
+}
